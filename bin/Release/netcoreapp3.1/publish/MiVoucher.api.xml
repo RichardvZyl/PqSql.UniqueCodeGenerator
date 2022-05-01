@@ -1,0 +1,916 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MiVoucher.api</name>
+    </assembly>
+    <members>
+        <member name="T:MiVoucher.api.Controllers.AccountsController">
+            <summary>
+            Accounting Controller used to view accounting data
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AccountsController.#ctor(MiVoucher.framework.IAccountingService)">
+            <summary>
+            Accounting Controller Constructor grants access to the accounting service and the accounting history service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AccountsController.Get(System.Guid)">
+            <summary>
+            Returns details of a specific entry
+            </summary>
+            <remarks>
+            Request details of a specific accounting entry
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AccountsController.ListCurrent">
+            <summary>
+            Returns a list of all accounting entries
+            </summary>
+            <remarks>
+            Request all accounting entries including archived
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AccountsController.ListHistory">
+            <summary>
+            Returns a list of all accounting entries that are archived
+            </summary>
+            <remarks>
+            Request all non archived accounting entries
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AccountsController.GetByVoucherCode(System.String)">
+            <summary>
+            Returns a list of all accounting entries linked to a voucher
+            </summary>
+            <remarks>
+            Request all accounting entries by voucherCode 
+            (accounting entries are connected to Original voucher code)
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.AngularListController">
+            <summary>
+            Angular List Controller used to view data on the frontend
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AngularListController.#ctor(MiVoucher.framework.IAngularListService)">
+            <summary>
+            Angular list Controller Constructor grants access to the angular list service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AngularListController.ListAcountingEntries">
+            <summary>
+            Returns a list of all current accounting entries
+            </summary>
+            <remarks>
+            Request all non archived accounting entries
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AngularListController.ListMakerCheckers">
+            <summary>
+            Returns a list of all Maker Checkers
+            </summary>
+            <remarks>
+            Returns a list of all Maker Checkers
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AngularListController.ListNotifications">
+            <summary>
+            Returns a list of all notification
+            </summary>
+            <remarks>
+            Request all notification entries
+            (notifications are retrieved by users' current role
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AngularListController.ListNotificationAlerts">
+            <summary>
+            Returns a list of all Notifications of alers status
+            </summary>
+            <remarks>
+            Returns a list of all Notifications of alers status
+            (notifications are retrieved by users' current role)
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AngularListController.ListAudits">
+            <summary>
+            Returns a list of all audit entries in the past month
+            </summary>
+            <remarks>
+            Returns a list of all audit entries in the past month
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AngularListController.ListVouchers">
+            <summary>
+            Returns a list of all active Vouchers
+            </summary>
+            <remarks>
+            Returns a list of all active Vouchers
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AngularListController.ListVoucherHistory(System.String)">
+            <summary>
+            Returns a list of Voucher hitory based on the original voucher code
+            </summary>
+            <remarks>
+            Returns a list of all Vouchers from the original voucherCode
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.AuditsController">
+             <summary>
+             Accounting Controller used to view accounting data
+             </summary>
+            
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AuditsController.#ctor(MiVoucher.framework.IAuditTrailService)">
+            <summary>
+            Accounting Controller Constructor grants access to the accounting service and the accounting history service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AuditsController.GetLastMonth">
+            <summary>
+            Returns a list of all audit entries in the last month
+            </summary>
+            <remarks>
+            Request all audit trail entries of the last month
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AuditsController.GetAll">
+            <summary>
+            Returns a list of all audit entries
+            </summary>
+            <remarks>
+            Request all audit trail entries
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.AuthsController">
+            <summary>
+            Authorization Controller used for login
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AuthsController.#ctor(MiVoucher.framework.IAuthService)">
+            <summary>
+            Auth Controller Constructor
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.AuthsController.SignInAsync(MiVoucher.models.SignInModel)">
+            <summary>
+            Sign In
+            </summary>
+            <param name="model"></param>
+            <returns>TokenModel</returns>
+            <remarks>
+            Sign in to the system to receive your bearer token
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.DocumentsController">
+            <summary>
+            File Controller used to upload and download files
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.DocumentsController.#ctor(MiVoucher.framework.IDocumentService)">
+            <summary>
+            File Controller Constructor
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.DocumentsController.PostFile(MiVoucher.models.FileModel)">
+            <summary>
+            Upload a new file
+            </summary>
+            <param name="fileModel"></param>
+            <remarks>
+            Send a document for saving on the server
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.DocumentsController.RemoveAsync(System.Guid)">
+            <summary>
+            Delete an uploaded file
+            </summary>
+            <param name="fileId"></param>
+            <remarks>
+            Remove a document by supplying the document Id
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.DocumentsController.GetAsync(System.Guid)">
+            <summary>
+            Get a specified file
+            </summary>
+            <remarks>
+            Send a document based on the document model for saving on the server
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.EntitlementController">
+            <summary>
+            Entitlement Controller used for retrieving default entitlement
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.EntitlementController.#ctor(MiVoucher.framework.IEntitlementExceptionsService)">
+            <summary>
+            Entitlment Exceptions Controller Constructor grants access to the IndustryType service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.EntitlementController.GetDefaultEntitlement(MiVoucher.models.RolesEnum)">
+            <summary>
+            Get Default Entitlement for given role
+            </summary>
+            <param name="role"></param>
+            <returns>EntilementExceptionsModel</returns>
+            <remarks>
+            Get the Default Entitlement for the given role
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.EntitlementController.GetUserEntitlement(System.String)">
+            <summary>
+            Get Current User Entitlement
+            </summary>
+            <param name="email"></param>
+            <returns>EntitlementExceptionsModel</returns>
+            <remarks>
+            Get the given user entitlement exceptions
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.EntitlementController.GetUserRole(System.String)">
+            <summary>
+            Get Current User Role and return it as a value pair string (for dropdown use)
+            </summary>
+            <param name="email"></param>
+            <returns>EntitlementExceptionsModel</returns>
+            <remarks>
+            Get the given user entitlement exceptions
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.IndustryTypesController">
+            <summary>
+            Industry Type Controller for industry type interactions
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.IndustryTypesController.#ctor(MiVoucher.framework.IIndustryTypeService)">
+            <summary>
+            industry Type Controller Constructor grants access to the IndustryType service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.IndustryTypesController.AddAsync(MiVoucher.models.IndustryTypeModel)">
+            <summary>
+            Create a new Industry Type
+            </summary>
+            <remarks>
+            Request creation of a new IndustryType and receive the new IndustryType ID
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.IndustryTypesController.GetAsync(System.Int32)">
+            <summary>
+            GET a specific industry type
+            </summary>
+            <remarks>
+            Request a specific industryType by supplying it's ID
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.IndustryTypesController.ListAsync">
+            <summary>
+            get a list of all industry types
+            </summary>
+            <remarks>
+            Request a ist of all the Industry Types
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.LookupsController">
+            <summary>
+            Lookups controller for sharing all enums and possible values
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.#ctor(MiVoucher.framework.IIndustryTypeService,MiVoucher.framework.IVoucherTypeService)">
+            <summary>
+            Lookups controller constructor that grants access to the industry type service and the voucher type service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.Roles">
+            <summary>
+            Get a list of all roles
+            </summary>
+            <remarks>
+            Request a list of all Roles
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.Entity">
+            <summary>
+            Get a list of all Enities used for notifications
+            </summary>
+            <remarks>
+            Request a list of all entities used in notifications
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.MakerChecker">
+            <summary>
+            Get a list of all Actions for Maker Checker
+            </summary>
+            <remarks>
+            Request a list of all Maker Checker actions
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.AccountTypes">
+            <summary>
+            Get a list of all Account Types used in Accounting
+            </summary>
+            <remarks>
+            Request a list of all accounting types used for accounting
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.TransactionTypes">
+            <summary>
+            Get a list of all transaction types used in Accounting module
+            </summary>
+            <remarks>
+            Request a list of all transaction types for Accounting module
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.Severity">
+            <summary>
+            Get a list of Severity used in notifications
+            </summary>
+            <remarks>
+            Request a list Severity used for Notifications
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.ListIndustryTypesAsync">
+            <summary>
+            get a list of all industry types
+            </summary>
+            <remarks>
+            Request a list of all Industry Types
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.ListOperationTypesAsync">
+            <summary>
+            List Patch operation types
+            </summary>
+            <remarks>
+            Request a list of the operation types used in the patch api calls
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.ListVoucherTypesAsync">
+            <summary>
+            Return a list of all Voucher Types
+            </summary>
+            <remarks>
+            Request a list of all Voucher Types
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.ListVoucherStatusAsync">
+            <summary>
+            Return a list of all Voucher Status
+            </summary>
+            <remarks>
+            Request a list of all Voucher Status
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.LookupsController.GetEnumList``1">
+            <summary>
+            Creates a KeyValuePair from the given enum
+            </summary>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.MakerCheckersController">
+            <summary>
+            Maker Checker Controller for Maker Checker interactions
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.#ctor(MiVoucher.framework.IVoucherService,MiVoucher.framework.IMakerCheckerService,MiVoucher.framework.IUserService,MiVoucher.framework.IEntitlementExceptionsService,MiVoucher.framework.IAuthService,MiVoucher.framework.IMerchantService)">
+            <summary>
+            MakerChecker constructor that grants access to the Voucher Service and the Maker Checker Service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.RefundAsync(MiVoucher.models.NewMakerCheckerModel)">
+            <summary>
+            Create a request to Refund Voucher
+            </summary>
+            <remarks>
+            Request a voucher refund
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.TransferAsync(MiVoucher.models.NewMakerCheckerModel)">
+            <summary>
+            Create a request to transfer a voucher to a new user
+            </summary>
+            <remarks>
+            Request a voucher transfer
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.SuspendUserAsync(MiVoucher.models.NewMakerCheckerModel)">
+            <summary>
+            Disable / Inactivate a user
+            </summary>
+            <remarks>
+            Request disabling a user by sending the user ID and receiving a result response
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.RegisterAsync(MiVoucher.models.NewMakerCheckerModel)">
+            <summary>
+            Create a request to create a new User
+            </summary>
+            <remarks>
+            Register a new user
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.ChangePassword(MiVoucher.models.NewMakerCheckerModel)">
+            <summary>
+            Create a request to Change a users password
+            </summary>
+            <remarks>
+            Change a users password
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.EntitlementAsync(MiVoucher.models.NewMakerCheckerModel)">
+            <summary>
+            Create a request to Change a users Role/Entitlement
+            </summary>
+            <remarks>
+            Change User entitlement/role
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.GetAsync(System.Guid)">
+            <summary>
+            Get a specific Maker Checker Entry
+            </summary>
+            <remarks>
+            Request a Maker Checker entry by supplying the GUID
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.GetFilesAsync(System.Guid)">
+            <summary>
+            Get a specific Maker Checker Entry files
+            </summary>
+            <remarks>
+            Request a Maker Checker entry' files by supplying the GUID
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.ListAsync">
+            <summary>
+            Get a list of all Maker Checkers
+            </summary>
+            <remarks>
+            Request a list of all Maker Checkers
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.Approve(System.Guid)">
+            <summary>
+            Approve a Maker Checker Entry
+            </summary>
+            <remarks>
+            Approve a Maker Checker entry and action the original request
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MakerCheckersController.Deny(System.Guid)">
+            <summary>
+            Deny a Maker Checker Entry
+            </summary>
+            <remarks>
+            Deny a Maker Checker Entry and take no further action
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.MerchantsController">
+            <summary>
+            Merchant controller for merchant interactions
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MerchantsController.#ctor(MiVoucher.framework.IMerchantService)">
+            <summary>
+            Merchant controller constructor
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MerchantsController.GetAsync(System.Guid)">
+            <summary>
+            Retrieve an existing merchant
+            </summary>
+            <param name="id"></param>
+            <remarks>
+            Request merchant details by providing the merchant id and receiving the merchant model as a response
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MerchantsController.AddAsync(MiVoucher.models.MerchantModel)">
+            <summary>
+            Add a new merchant
+            </summary>
+            <param name="model"></param>
+            <remarks>
+            Request creation of a new merchant
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MerchantsController.ListAsync">
+            <summary>
+            Get a list of all merchants
+            </summary>
+            <remarks>
+            Request a list of all saved merchants
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.MerchantsController.UpdateAsync(System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MiVoucher.models.MerchantModel})">
+            <summary>
+            Update merchant details
+            </summary>
+            <param name="merchantId"></param>
+            <param name="patchDoc"></param>
+            <remarks>
+            Request updating a merchant by providing the new merchant details and receiving a result
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.NotificationsController">
+            <summary>
+            Notification controller for notification interactions
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.NotificationsController.#ctor(MiVoucher.framework.INotificationService)">
+            <summary>
+            Notification Constructor provides access to the notification service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.NotificationsController.ListAsync">
+            <summary>
+            Get a list of all notifications
+            </summary>
+            <remarks>
+            Request a list of all notifications
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.NotificationsController.ListByRoleAsync">
+            <summary>
+            Get a list of all notifications by current Role
+            </summary>
+            <remarks>
+            Request a list of all notifications By Role (Role is determined by logged in user)
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.NotificationsController.ListAlertsAsync">
+            <summary>
+            Get all notifications with Alert status (Serious)
+            </summary>
+            <remarks>
+            Request notifications with a serious/error status
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.NotificationsController.GetAsync(System.Guid)">
+            <summary>
+            Get a specific notification based on received id
+            </summary>
+            <remarks>
+            Get notification details by supplying the notification ID
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.NotificationsController.ReadNotification(System.Guid)">
+            <summary>
+            Mark a Notification as read
+            </summary>
+            <remarks>
+            Read a notification by supplying it's ID and the current user email
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.ReportsController">
+            <summary>
+            Report Controller
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.ReportsController.#ctor(MiVoucher.framework.IReportService)">
+            <summary>
+            Report Controller Constructor
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.ReportsController.RequestReport(MiVoucher.models.ReportRequestModel)">
+            <summary>
+            Request a report based on the parameters
+            </summary>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.UsersController">
+            <summary>
+            User controller for user interactions
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.UsersController.#ctor(MiVoucher.framework.IUserService)">
+            <summary>
+            User controller constructor
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.UsersController.GetAsync(System.Guid)">
+            <summary>
+            Retrieve an existing user
+            </summary>
+            <remarks>
+            Request user details by providing the user id and receiving the user model as a response
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.UsersController.GetCurrentAsync">
+            <summary>
+            Retrieve the currently logged in user
+            </summary>
+            <remarks>
+            Request user details of the currently signd in user, receiving the user model as a response
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.UsersController.ListAsync">
+            <summary>
+            Get a list of all user
+            </summary>
+            <remarks>
+            Request a list of all saved users
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.UsersController.UpdateAsync(System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MiVoucher.models.UserModel})">
+            <summary>
+            Update user details
+            </summary>
+            <param name="patchDoc"></param>
+            <remarks>
+            Request updating a user by providing the new user details and receiving a result
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.VouchersController">
+            <summary>
+            Vouchers Controller for interactions with vouchers
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.#ctor(MiVoucher.framework.IVoucherService)">
+            <summary>
+            Voucher Controller Constructor grants access to the voucher service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.AddAsync(MiVoucher.models.VoucherRequestModel[])">
+            <summary>
+            Request creation of new vouchers
+            </summary>
+            <param name="models"></param>
+            <remarks>
+            Request creation of new vouchers and receive the created vouchers as a result
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.GetAsync(System.String)">
+            <summary>
+            Get a specific instance of a voucher
+            </summary>
+            <param name="voucherCode"></param>
+            <remarks>
+            Request an existing voucher by supplying the voucher code and receive the voucher as a result
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.RefundAsync(System.String)">
+            <summary>
+            Refund Voucher
+            </summary>
+            <param name="voucherCode"></param>
+            <remarks>
+            Request refunding a voucher by supplying the voucher code to make the voucher no Guider useable
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.RedeemAsync(MiVoucher.models.RedeemRequestModel)">
+            <summary>
+            Redeem a Voucher based on given parameters
+            </summary>
+            <param name="request"></param>
+            <remarks>
+            Request redemption of a voucher and record the transaction
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.TransferAsync(MiVoucher.models.TransferRequestModel)">
+            <summary>
+            Transfer the voucher to a new user
+            </summary>
+            <param name="model"></param>
+            <remarks>
+            Request transfering a voucher to a new user by supplying the voucher code and new user details
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.JsonPatchWithModelState(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{MiVoucher.models.VoucherModel})">
+            <summary>
+            Update Voucher
+            </summary>
+            <param name="voucherCode"></param>
+            <param name="patchDoc"></param>
+            <remarks>
+            Request updating a vouchers details by providing patch json.
+            Only the following values can be changed:
+            ServiceMerchantId, IndustryTypeId, VoucherTypeId, IsTransferable,
+            IsMultipleUse, ValidFrom, ValidTo, ShortDescription
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.ListAllAsync">
+            <summary>
+            Get a list of all voucher
+            </summary>
+            <remarks>
+            Request a list of all vouchers
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.ListByStatusAsync(MiVoucher.models.VoucherStatuEnum)">
+            <summary>
+            Get a list of all active voucher
+            </summary>
+            <remarks>
+            Request a list of all vouchers
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.ListByMerchantAsync(System.Guid)">
+            <summary>
+            Get a list of all vouchers for given merchant
+            </summary>
+            <param name="merchantId"></param>
+            <remarks>
+            Request a list of all vouchers that are issued by the given merchant
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.ListByCellNumberAsync(System.String)">
+            <summary>
+            Get a list of all vouchers assigned to the supplied number
+            </summary>
+            <param name="number"></param>
+            <remarks>
+            Request a list of all vouchers
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.ListByMerchantAndStatusAsync(System.Guid,MiVoucher.models.VoucherStatuEnum)">
+            <summary>
+            Get a list of all vouchers in supplied status for given merchant
+            </summary>
+            <param name="merchantId"></param>
+            <param name="status"></param>
+            <remarks>
+            Request a list of all vouchers that are issued by the given merchant and in the supplied status
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.ListByCellNumberAndStatusAsync(System.String,MiVoucher.models.VoucherStatuEnum)">
+            <summary>
+            Get a list of all vouchers assigned to the supplied number and in the supplied status
+            </summary>
+            <param name="number"></param>
+            <param name="status"></param>
+            <remarks>
+            Request a list of all vouchers assigned to supplied number and in supplied status
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VouchersController.ListByOriginalVoucherCodeAsync(System.String)">
+            <summary>
+            Get a list of all reissued vouchers given the original voucher code
+            </summary>
+            <param name="voucherCode"></param>
+            <remarks>
+            Request a list of all vouchers issued from the original voucher code
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.VoucherTemplatesController">
+            <summary>
+            Vouchers Controller for interactions with vouchers
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VoucherTemplatesController.#ctor(MiVoucher.framework.IVoucherTemplateService)">
+            <summary>
+            Voucher Controller Constructor grants access to the voucher service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VoucherTemplatesController.AddAsync(MiVoucher.models.VoucherTemplateCreateModel)">
+            <summary>
+            Request creation of a new voucher template
+            </summary>
+            <param name="model"></param>
+            <remarks>
+            Request creation of a new voucher template and receive the created voucher template as a result
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VoucherTemplatesController.CreateVouchersAsync(MiVoucher.models.VoucherTemplateModel[])">
+            <summary>
+            Request creation of new vouchers based on template
+            </summary>
+            <param name="models"></param>
+            <remarks>
+            Request creation of new vouchers and receive the created vouchers as a result by supplying the template to use and the values missing from the template
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VoucherTemplatesController.GetAsync(System.Guid)">
+            <summary>
+            Get a specific instance of a voucher template
+            </summary>
+            <param name="templateId"></param>
+            <remarks>
+            Request an existing voucher template by supplying the voucher code and receive the voucher as a result
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VoucherTemplatesController.ListAsync">
+            <summary>
+            Get a list of all voucher templates
+            </summary>
+            <remarks>
+            Request a list of all voucher templates
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VoucherTemplatesController.ListBySearchCriteriaAsync(MiVoucher.models.VoucherTemplateCreateModel)">
+            <summary>
+            Get a list of all voucher templates that fall within supplied criteria (supply only one value)
+            </summary>
+            <remarks>
+            Request a list of all voucher templates that adhere to the search condition (supply one condition as only the first one will be used)
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.Controllers.VoucherTypesController">
+            <summary>
+            Voucher Type controller for Voucher Type interactions
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VoucherTypesController.#ctor(MiVoucher.framework.IVoucherTypeService)">
+            <summary>
+            Voucher Type controller Constructor to initialize the service
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VoucherTypesController.AddAsync(MiVoucher.models.VoucherTypeModel)">
+            <summary>
+            Add a new voucher type
+            </summary>
+            <remarks>
+            Request a new voucher type and receive its ID as a response
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VoucherTypesController.GetAsync(System.Int32)">
+            <summary>
+            GET a specific industry type
+            </summary>
+            <remarks>
+            Request details of a specific industry type by supplying the associated ID
+            </remarks>
+        </member>
+        <member name="M:MiVoucher.api.Controllers.VoucherTypesController.ListAsync">
+            <summary>
+            Return a list of all Voucher Types
+            </summary>
+            <remarks>
+            Request a list of all the saved voucher types
+            </remarks>
+        </member>
+        <member name="T:MiVoucher.api.RemoveVersionParameterFilter">
+            <summary>
+            Add versioning functionality
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.RemoveVersionParameterFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Add versioning functionality
+            </summary>
+        </member>
+        <member name="T:MiVoucher.api.ReplaceVersionWithExactValueInPathFilter">
+            <summary>
+            Add current version
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.ReplaceVersionWithExactValueInPathFilter.Apply(Microsoft.OpenApi.Models.OpenApiDocument,Swashbuckle.AspNetCore.SwaggerGen.DocumentFilterContext)">
+            <summary>
+            Add current version
+            </summary>
+        </member>
+        <member name="T:MiVoucher.api.Extensions">
+            <summary>
+            Add functionality to existing features
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Extensions.AddContextUseSQL(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Define the current SQL context of the application
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Extensions.AddContextUsePostgreSQL(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Define the current PostgreSQL context of the application
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Extensions.AddSecurity(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add security token
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Extensions.AddServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add Services to be used by application
+            </summary>
+        </member>
+        <member name="T:MiVoucher.api.Program">
+            <summary>
+            The main class of the program
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Program.Main">
+            <summary>
+            The starting point of the application
+            </summary>
+        </member>
+        <member name="T:MiVoucher.api.Startup">
+            <summary>
+            Used for configuration on application start
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Configure application functionality
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configure application Services
+            </summary>
+        </member>
+        <member name="M:MiVoucher.api.Startup.GetJsonPatchInputFormatter">
+            <summary>
+            JSonPatch Input Formatter
+            </summary>
+        </member>
+    </members>
+</doc>

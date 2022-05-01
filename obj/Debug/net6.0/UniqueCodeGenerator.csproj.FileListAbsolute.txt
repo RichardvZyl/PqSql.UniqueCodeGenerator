@@ -1,0 +1,5 @@
+C:\Users\RichardvanZyl\source\repos\DemoApps\DemoApplication\DemoApplication.UniqueCodeGenerator\obj\Debug\net6.0\UniqueCodeGenerator.csproj.AssemblyReference.cache
+C:\Users\RichardvanZyl\source\repos\DemoApps\DemoApplication\DemoApplication.UniqueCodeGenerator\obj\Debug\net6.0\UniqueCodeGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RichardvanZyl\source\repos\DemoApps\DemoApplication\DemoApplication.UniqueCodeGenerator\obj\Debug\net6.0\UniqueCodeGenerator.AssemblyInfoInputs.cache
+C:\Users\RichardvanZyl\source\repos\DemoApps\DemoApplication\DemoApplication.UniqueCodeGenerator\obj\Debug\net6.0\UniqueCodeGenerator.AssemblyInfo.cs
+C:\Users\RichardvanZyl\source\repos\DemoApps\DemoApplication\DemoApplication.UniqueCodeGenerator\obj\Debug\net6.0\UniqueCodeGenerator.csproj.CoreCompileInputs.cache

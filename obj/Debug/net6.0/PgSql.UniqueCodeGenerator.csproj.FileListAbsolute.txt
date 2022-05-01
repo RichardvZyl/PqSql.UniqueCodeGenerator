@@ -1,0 +1,12 @@
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\bin\Debug\net6.0\PgSql.UniqueCodeGenerator.deps.json
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\bin\Debug\net6.0\PgSql.UniqueCodeGenerator.dll
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\bin\Debug\net6.0\PgSql.UniqueCodeGenerator.pdb
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\obj\Debug\net6.0\PgSql.UniqueCodeGenerator.csproj.AssemblyReference.cache
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\obj\Debug\net6.0\PgSql.UniqueCodeGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\obj\Debug\net6.0\PgSql.UniqueCodeGenerator.AssemblyInfoInputs.cache
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\obj\Debug\net6.0\PgSql.UniqueCodeGenerator.AssemblyInfo.cs
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\obj\Debug\net6.0\PgSql.UniqueCodeGenerator.csproj.CoreCompileInputs.cache
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\obj\Debug\net6.0\PgSql.UniqueCodeGenerator.dll
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\obj\Debug\net6.0\refint\PgSql.UniqueCodeGenerator.dll
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\obj\Debug\net6.0\PgSql.UniqueCodeGenerator.pdb
+C:\Users\RichardvanZyl\source\repos\DemoApps\PgSql.UniqueCodeGenerator\obj\Debug\net6.0\ref\PgSql.UniqueCodeGenerator.dll
