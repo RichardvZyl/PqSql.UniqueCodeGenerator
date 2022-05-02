@@ -50,3 +50,11 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+*.deps
+*.dtbcachev2
+*.cache
+*.props
+*.v1
+*.suo
+
